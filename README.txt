@@ -13,18 +13,37 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 -------------------------------------------------------------
 
-December 1, 2017 - The CO1 v1 training set can be used to make taxonomic assignments to the GENUS rank and the CO1 v2 training set can be used to make taxonomic assignments to the SPECIES rank.  These were developed and tested with the RDP classifier 2.12 (separate download and installation).  
+December 4, 2017 - 
 
-CO1v1_trained.tar.gz and CO1v2_trained.tar.gz contains the files produced after training the RDP Classifier and these compressed files should be downloaded individually.  
+The latest release can be downloaded from here:
+https://github.com/terrimporter/CO1Classifier/releases/tag/v2.0
+The CO1v2_trained.tar.gz file should be decompressed and used directly with the RDP Classifier to make taxonomic assignments to the species rank.
 
-At the command-line run tar -xvzf FileName.tar.gz to decompress the folder.
+The reference files for the latest release can be downloaded from here:
+https://github.com/terrimporter/CO1Classifier/releases/tag/v2.0-ref
+The CO1v2_training.tar.gz file should be decompressed.  The folder contains the original taxonomy and fasta files that are included here for reference only.  They were originally mined from GenBank in August 2016.
 
-Use with the RDP classifier as follows:
+The original release described in Porter & Hajibabaei (2017) can be downloaded from here:
+https://github.com/terrimporter/CO1Classifier/releases/tag/v1.0
+The CO1v1_trained.tar.gz file should be decompressed and used directly with the RDP Classifier to make taxonomic assignments to the genus rank.
+
+The reference files for the original release described in Porter & Hajibabaei (2017) can be downloaded from here:
+https://github.com/terrimporter/CO1Classifier/releases/tag/v1.0-ref
+The CO1v1_training.tar.gz file should be decompressed.  The folder contains the original taxonomy and fasta files that are included here for reference only.  They were originally mined from GenBank in August 2016.
+
+-------------------------------------------------------------
+
+Decompress the tar.gz file:
+
+$ tar -xvzf FileName.tar.gz
+
+Use with the RDP classifier:
 
 java -Xmx8g -jar /path/to/rdp_classifier_2.12/dist/classifier.jar classify -t /path/to/CO1version_trained/rRNAClassifier.properties -o ClassifiedQueryFilename QueryFilename
-
-The folder 'ReferenceFiles' contains CO1v1_training.tar.gz and CO1v2_training.tar.gz with the original taxon and fasta files used to train the RDP classifier and are included here for reference only.  
 
 For additional information on choosing appropriate bootstrap support cutoff values, see Porter & Hajibabaei (2017).
 
 For additional information on how to run the RDP classifier, see the RDPclassifier 2.12 README.
+
+The RDP classifier can be downloaded from:
+https://github.com/rdpstaff/classifier
