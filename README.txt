@@ -41,7 +41,8 @@ Use with the RDP classifier:
 
 java -Xmx8g -jar /path/to/rdp_classifier_2.12/dist/classifier.jar classify -t /path/to/CO1version_trained/rRNAClassifier.properties -o ClassifiedQueryFilename QueryFilename
 
-For additional information on choosing appropriate bootstrap support cutoff values, see Porter & Hajibabaei (2017).
+For additional information on choosing appropriate bootstrap support cutoff values, see Porter & Hajibabaei (2017):
+https://doi.org/10.1101/219675
 
 For additional information on how to run the RDP classifier, see the RDPclassifier 2.12 README.
 
