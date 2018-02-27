@@ -49,5 +49,5 @@ https://doi.org/10.1101/219675
 
 For additional information on how to run the RDP classifier, see the RDPclassifier 2.12 README.
 
-The RDP classifier can be downloaded from:
-https://github.com/rdpstaff/classifier
+The RDP classifier v2.12 can be downloaded from:
+https://sourceforge.net/projects/rdp-classifier/
