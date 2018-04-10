@@ -7,7 +7,7 @@ This repository contains training sets that can be used with the Ribosomal Datab
 If you use these training sets in a publication, please cite:
 
 ## Training set 
-Porter, T.M., & Hajibabaei, M. (2017) Automated high throughput animal DNA metabarcode classification.  bioRxiv, doi: https://doi.org/10.1101/219675
+Porter, T.M., & Hajibabaei, M. (2018) Automated high throughput animal CO1 metabarcode classification.  Scientific Reports, 8, 4226.
 
 ## Classifier 
 Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy.  Applied and Environmental Microbiology, 73: 5261.
