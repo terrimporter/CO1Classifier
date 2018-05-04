@@ -51,3 +51,7 @@ For additional information on how to run the RDP classifier, see the RDPclassifi
 
 The RDP classifier v2.12 can be downloaded from:
 https://sourceforge.net/projects/rdp-classifier/
+
+# Acknowledgements
+
+We acknowledge support from the Canadian federal Genomics R & D Initiative interdepartmental EcoBiomics project.
