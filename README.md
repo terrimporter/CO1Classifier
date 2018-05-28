@@ -18,7 +18,7 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 The latest release can be downloaded from here:
 https://github.com/terrimporter/CO1Classifier/releases/tag/v3.0
-This file should be decompressed and used directly with the RDP Classifier to make taoxnomic assignments to the species rank.
+The CO1v3_trained.tar.gz file should be decompressed and used directly with the RDP Classifier to make taoxnomic assignments to the species rank.
 
 The reference files for the latest release can be downloaded from here:
 https://github.com/terrimporter/CO1Classifier/releases/tag/v3.0-ref
