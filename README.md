@@ -26,16 +26,16 @@ The CO1v3_training.tar.gz file should be decompressed.  The folder contains the 
 
 Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~99% correct assignments:
 
-Rank | 500bp+ | 400 bp | 200 bp | 100 bp | 50 bp
---- |:---:|:---:|:---:|:---:|:---:|:---:
-Superkingdom | 0 | 0 | 0 | 0 | 0
-Kingdom | 0 | 0 | 0 | 0 | 0
-Phylum | 0 | 0 | 0 | 0 | 0 
-Class | 0 | 0 | 0 | 0 | 30
-Order | 0 | 0 | 0 | 20 | 70
-Family | 0 | 10 | 20 | 20 | 70
-Genus | 40 | 30 | 30 | 40 | 90
-Species | NA | NA | NA | NA | NA
+Rank | 500bp+ | 400 bp | 200 bp | 100 bp | 50 bp  
+--- |:---:|:---:|:---:|:---:|:---:|:---:  
+Superkingdom | 0 | 0 | 0 | 0 | 0  
+Kingdom | 0 | 0 | 0 | 0 | 0  
+Phylum | 0 | 0 | 0 | 0 | 0   
+Class | 0 | 0 | 0 | 0 | 30  
+Order | 0 | 0 | 0 | 20 | 70  
+Family | 0 | 10 | 20 | 20 | 70  
+Genus | 40 | 30 | 30 | 40 | 90  
+Species | NA | NA | NA | NA | NA  
 
 NA = No cutoff available will result in 99% correct assignments
 
