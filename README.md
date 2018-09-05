@@ -52,7 +52,7 @@ The CO1v2_training.tar.gz file should be decompressed.  The folder contains the 
 Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~99% correct assignments:
 
 Rank | 500bp+ | 400 bp | 200 bp | 100 bp | 50 bp
---- |:---:|:---:|:---:|:---:|:---:|:---:
+--- |:---:|:---:|:---:|:---:|:---:
 Superkingdom | 0 | 0 | 0 | 0 | 0
 Kingdom | 0 | 0 | 0 | 0 | 0
 Phylum | 0 | 0 | 0 | 0 | 0 
@@ -77,7 +77,7 @@ The CO1v1_training.tar.gz file should be decompressed.  The folder contains the 
 Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~99% correct assignments:
 
 Rank | 500bp+ | 400 bp | 200 bp | 100 bp | 50 bp
---- |:---:|:---:|:---:|:---:|:---:|:---:
+--- |:---:|:---:|:---:|:---:|:---:
 Superkingdom | 0 | 0 | 0 | 0 | 0
 Kingdom | 0 | 0 | 0 | 0 | 0
 Phylum | 0 | 0 | 0 | 0 | 0 
