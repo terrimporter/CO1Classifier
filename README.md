@@ -1,6 +1,6 @@
 # Introduction
 
-This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.
+This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/CO1Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.
 
 # How to cite
 
@@ -14,13 +14,25 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 # Releases
 
-### v3
+### v3.1
 
 The latest release can be downloaded from here:
+https://github.com/terrimporter/CO1Classifier/releases/tag/v3.1
+The CO1v3_1_trained.tar.gz file should be decompressed and used directly with the RDP Classifier to make taxonomic assignments to the species rank.
+
+The reference files for the latest release can be downloaded from here:
+https://github.com/terrimporter/CO1Classifier/releases/tag/v3.1-ref
+The CO1v3_1_training.tar.gz file should be cecompressed.  The folder contains the original taxonomy and fasta files that are included here for reference only.  They are the same as the v3 files except that a few bacterophage outgroup sequences that were misannotated as viruses were removed.
+
+The v3 MINIMUM bootstrap cutoff values should be used with this version of the CO1 classifier.
+
+### v3
+
+The v3 release can be downloaded from here:
 https://github.com/terrimporter/CO1Classifier/releases/tag/v3.0
 The CO1v3_trained.tar.gz file should be decompressed and used directly with the RDP Classifier to make taxonomic assignments to the species rank.
 
-The reference files for the latest release can be downloaded from here:
+The reference files for the v3 release can be downloaded from here:
 https://github.com/terrimporter/CO1Classifier/releases/tag/v3.0-ref
 The CO1v3_training.tar.gz file should be decompressed.  The folder contains the original taxonomy and fasta files that are included here for reference only.  They were originally mined from GenBank in April 2018.  These sequences were originally identified to the species rank in the NCBI nucleotide database.  All sequences here are at least 500bp long and have been screened to remove human and bacterial contaminant sequences.  Sequences containing any nucleotide ambiguities were excluded.  Taxonomic composition is largely Arthropoda and Chordata.  Outgroup taxa representing other major eukaryote and prokaryote lineages have been included.
 
