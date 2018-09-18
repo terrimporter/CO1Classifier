@@ -22,7 +22,7 @@ The CO1v3_1_trained.tar.gz file should be decompressed and used directly with th
 
 The reference files for the latest release can be downloaded from here:
 https://github.com/terrimporter/CO1Classifier/releases/tag/v3.1-ref
-The CO1v3_1_training.tar.gz file should be cecompressed.  The folder contains the original taxonomy and fasta files that are included here for reference only.  They are the same as the v3 files except that a few bacterophage outgroup sequences that were misannotated as viruses were removed.
+The CO1v3_1_training.tar.gz file should be cecompressed.  The folder contains the original taxonomy and fasta files that are included here for reference only.  They are the same as the v3 files except that a few bacterial outgroup sequences that were misannotated as bacteriophage viruses were removed.
 
 The v3 MINIMUM bootstrap cutoff values should be used with this version of the CO1 classifier.
 
