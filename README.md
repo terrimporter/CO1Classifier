@@ -6,10 +6,10 @@ This repository contains training sets that can be used with the Ribosomal Datab
 
 If you use these training sets in a publication, please cite:
 
-## Training set 
+## The COI training set 
 Porter, T.M., & Hajibabaei, M. (2018) Automated high throughput animal CO1 metabarcode classification.  Scientific Reports, 8, 4226.
 
-## Classifier 
+## The RDP classifier 
 Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy.  Applied and Environmental Microbiology, 73: 5261.
 
 # Releases
