@@ -14,13 +14,27 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 # Releases
 
-### v3.1
+### v3.2
+
+This version was updated to include some invasives species of interest even though their sequences are less than 500bp in length.
 
 The latest release can be downloaded from here:
+https://github.com/terrimporter/CO1Classifier/releases/tag/v3.2
+The CO1v3_2_trained.tar.gz file should be decompressed and used directly with the RDP Classifier to make taxonomic assignments to the species rank.
+
+The reference files for the latest release can be downloaded from here:
+https://github.com/terrimporter/CO1Classifier/releases/tag/v3.2-ref
+The CO1v3_2_training.tar.gz file should be cecompressed.  The folder contains the original taxonomy and fasta files that are included here for reference only.  They are the same as the v3 files except that a few bacterial outgroup sequences that were misannotated as bacteriophage viruses were removed.
+
+The v3 MINIMUM bootstrap cutoff values should be used with this version of the CO1 classifier.
+
+### v3.1
+
+The v3.1 release can be downloaded from here:
 https://github.com/terrimporter/CO1Classifier/releases/tag/v3.1
 The CO1v3_1_trained.tar.gz file should be decompressed and used directly with the RDP Classifier to make taxonomic assignments to the species rank.
 
-The reference files for the latest release can be downloaded from here:
+The reference files for the v3.1 release can be downloaded from here:
 https://github.com/terrimporter/CO1Classifier/releases/tag/v3.1-ref
 The CO1v3_1_training.tar.gz file should be cecompressed.  The folder contains the original taxonomy and fasta files that are included here for reference only.  They are the same as the v3 files except that a few bacterial outgroup sequences that were misannotated as bacteriophage viruses were removed.
 
