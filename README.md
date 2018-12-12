@@ -65,6 +65,21 @@ Species | NA | NA | NA | NA | NA
 
 NA = No cutoff available will result in 99% correct assignments
 
+If you really want to work with species level data, then assuming that your query sequences are present in the reference set, using these cutoffs should result in ~95% correct assignments:
+
+Rank | 500bp+ | 400 bp | 200 bp | 100 bp | 50 bp  
+--- |:---:|:---:|:---:|:---:|:---:  
+Superkingdom | 0 | 0 | 0 | 0 | 0  
+Kingdom | 0 | 0 | 0 | 0 | 0  
+Phylum | 0 | 0 | 0 | 0 | 0   
+Class | 0 | 0 | 0 | 0 | 0  
+Order | 0 | 0 | 0 | 0 | 10  
+Family | 0 | 0 | 0 | 0 | 30  
+Genus | 0 | 0 | 0 | 0 | 30  
+Species | 60 | 70 | 70 | 80 | NA  
+
+NA = No cutoff available will result in 95% correct assignments
+
 ### v2 
 
 The v2.0 release can be downloaded from here:
