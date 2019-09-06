@@ -14,6 +14,10 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 # Releases
 
+### v4
+
+This version was updated to include COI sequences mined from GenBank [April 2019] and the BOLD data releases [iBOL_phase2.0_COI.tsv to iBOL_phase_6.50_COI.tsv].
+
 ### v3.2
 
 This version was updated to include some invasives species of interest even though their sequences are less than 500bp in length.
