@@ -156,3 +156,5 @@ https://sourceforge.net/projects/rdp-classifier/
 # Acknowledgements
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
+
+Last updated: January 24, 2020
