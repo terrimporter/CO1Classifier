@@ -153,6 +153,14 @@ For additional information on how to run the RDP classifier, see the RDPclassifi
 The RDP classifier v2.12 can be downloaded from:
 https://sourceforge.net/projects/rdp-classifier/
 
+# References
+
+Porter, T.M., & Gibson, J.F., Shokralla, S., Baird, D.J., Golding, G.B., Hajibabaei, M. (2014) Rapid and accurate taxonomic classification of insect (class Insecta) cytochrome c oxidase subunit 1 (COI) DNA barcode sequences using a naive Bayesian classifier.  Molecular Ecology Resources, 14: 929-942.
+
+Porter, T.M., & Hajibabaei, M. (2018) Automated high throughput animal CO1 metabarcode classification.  Scientific Reports, 8, 4226.
+
+Wang, Q., Garrity, G. M., Tiedje, J. M., & Cole, J. R. (2007). Naive Bayesian Classifier for Rapid Assignment of rRNA Sequences into the New Bacterial Taxonomy. Applied and Environmental Microbiology, 73(16), 5261–5267. Available from https://sourceforge.net/projects/rdp-classifier/
+
 # Acknowledgements
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
