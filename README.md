@@ -16,7 +16,9 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 ### v4
 
-This version was updated to include COI sequences mined from GenBank [April 2019] and the BOLD data releases [iBOL_phase2.0_COI.tsv to iBOL_phase_6.50_COI.tsv] from http://v3.boldsystems.org/index.php/datarelease .  GenBank sequences were filtered to only include those 500bp+, containing no nucleotide ambiguities, and with a Linnean binomial species name.  BOLD sequences were filtered to only retain sequences 500bp+, with less than 3 ambiguous bases, and containing a Linnean binomial species name.  This page will be updated with updated cutoffs when available.  For now use the recommended cutoffs for v3 (below).
+This version was updated to include COI sequences mined from GenBank [April 2019] and the BOLD data releases [iBOL_phase2.0_COI.tsv to iBOL_phase_6.50_COI.tsv] from http://v3.boldsystems.org/index.php/datarelease .  GenBank sequences were filtered to only include those 500bp+, containing no nucleotide ambiguities, and with a Linnean binomial species name.  BOLD sequences were filtered to only retain sequences 500bp+, with less than 3 ambiguous bases, and containing a Linnean binomial species name.  Sequences were screened for human and bacterial contaminants.  Bacterial outgroup sequences were added.
+
+This page will be updated with updated cutoffs when available.  For now use the recommended cutoffs for v3 (below).
 
 ### v3.2
 
