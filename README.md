@@ -111,6 +111,21 @@ Species | NA | NA | NA | NA | NA
 
 NA = No cutoff available will result in 99% correct assignments
 
+Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~95% correct assignments:
+
+Rank | 500bp+ | 400 bp | 200 bp | 100 bp | 50 bp
+--- |:---:|:---:|:---:|:---:|:---:
+Superkingdom | 0 | 0 | 0 | 0 | 0
+Kingdom | 0 | 0 | 0 | 0 | 0
+Phylum | 0 | 0 | 0 | 0 | 0 
+Class | 0 | 0 | 0 | 0 | 0
+Order | 0 | 0 | 0 | 0 | 10
+Family | 0 | 0 | 0 | 0 | 30
+Genus | 0 | 0 | 0 | 0 | 30
+Species | 50 | 40 | 50 | 60 | 90
+
+NA = No cutoff available will result in 95% correct assignments
+
 ### v1
 
 The original release described in Porter & Hajibabaei (2017) can be downloaded from here:
@@ -167,4 +182,4 @@ Wang, Q., Garrity, G. M., Tiedje, J. M., & Cole, J. R. (2007). Naive Bayesian Cl
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
 
-Last updated: July 16, 2020
+Last updated: August 18, 2020
