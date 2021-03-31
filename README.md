@@ -2,7 +2,7 @@
 
 This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/CO1Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.
 
-# Quick start
+## Quick start
 
 ```linux
 ############ Install the RDP classifier if you need it
@@ -29,17 +29,17 @@ rdp_classifier -Xmx8g classify -t /path/to/mydata_trained/rRNAClassifier.propert
 java -Xmx8g -jar /path/to/rdp_classifier_2.13/classifier.jar -t /path/to/mydata_trained/rRNAClassifier.properties -o rdp.output query.fasta
 ```
 
-# How to cite
+## How to cite
 
 If you use these training sets in a publication, please cite:
 
-## The COI training set 
+### The COI training set 
 Porter, T.M., & Hajibabaei, M. (2018) Automated high throughput animal CO1 metabarcode classification.  Scientific Reports, 8, 4226.
 
-## The RDP classifier 
+### The RDP classifier 
 Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy.  Applied and Environmental Microbiology, 73: 5261.
 
-# Releases
+## Releases
 
 ### v4
 
