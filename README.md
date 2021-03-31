@@ -14,7 +14,6 @@ wget https://sourceforge.net/projects/rdp-classifier/files/rdp-classifier/rdp_cl
 unzip rdp_classifier_2.13
 # record path to classifier.jar ex. /path/to/rdp_classifier_2.13/dist/classifier.jar
 
-
 ############ Get the latest COI training set
 wget https://github.com/terrimporter/CO1Classifier/releases/download/v4/CO1v4_trained.tar.gz
 
