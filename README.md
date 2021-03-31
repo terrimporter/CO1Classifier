@@ -2,6 +2,33 @@
 
 This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/CO1Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.
 
+# Quick start
+
+```linux
+############ Install the RDP classifier if you need it
+# The easiest way to install the RDP classifier v2.13 is using conda
+conda install -c bioconda rdp_classifier
+# Alternatively, you can install from Source Forge and run with java if you don't use conda
+wget https://sourceforge.net/projects/rdp-classifier/files/rdp-classifier/rdp_classifier_2.13.zip
+# decompress it
+unzip rdp_classifier_2.13
+# record path to classifier.jar ex. /path/to/rdp_classifier_2.13/dist/classifier.jar
+
+
+############ Get the latest COI training set
+wget https://github.com/terrimporter/CO1Classifier/releases/download/v4/CO1v4_trained.tar.gz
+
+# decompress it
+tar -xzf CO1v4_trained.tar.gz
+
+# record the path to the rRNAClassifier.properties file ex. /path/to/mydata_trained/rRNAClassifier.properties
+
+############ Run the RDP Classifier that was installed using conda like this:
+rdp_classifier -Xmx8g classify -t /path/to/mydata_trained/rRNAClassifier.properties -o rdp.output query.fasta
+# otherwise run using java like this:
+java -Xmx8g -jar ./classifier.jar -t /path/to/mydata_trained/rRNAClassifier.properties -o rdp.output query.fasta
+```
+
 # How to cite
 
 If you use these training sets in a publication, please cite:
@@ -182,4 +209,4 @@ Wang, Q., Garrity, G. M., Tiedje, J. M., & Cole, J. R. (2007). Naive Bayesian Cl
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
 
-Last updated: August 18, 2020
+Last updated: March 31, 2021
