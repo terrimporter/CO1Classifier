@@ -26,7 +26,7 @@ tar -xzf CO1v4_trained.tar.gz
 ############ Run the RDP Classifier that was installed using conda like this:
 rdp_classifier -Xmx8g classify -t /path/to/mydata_trained/rRNAClassifier.properties -o rdp.output query.fasta
 # otherwise run using java like this:
-java -Xmx8g -jar ./classifier.jar -t /path/to/mydata_trained/rRNAClassifier.properties -o rdp.output query.fasta
+java -Xmx8g -jar /path/to/rdp_classifier_2.13/classifier.jar -t /path/to/mydata_trained/rRNAClassifier.properties -o rdp.output query.fasta
 ```
 
 # How to cite
