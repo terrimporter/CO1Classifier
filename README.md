@@ -8,7 +8,7 @@ This repository contains training sets that can be used with the Ribosomal Datab
 ############ Install the RDP classifier if you need it
 # The easiest way to install the RDP classifier v2.13 is using conda
 conda install -c bioconda rdp_classifier
-# Alternatively, you can install from Source Forge and run with java if you don't use conda
+# Alternatively, you can install from SourceForge and run with java if you don't use conda
 wget https://sourceforge.net/projects/rdp-classifier/files/rdp-classifier/rdp_classifier_2.13.zip
 # decompress it
 unzip rdp_classifier_2.13
