@@ -1,4 +1,4 @@
-# Introduction
+# Eukaryote CO1 Reference Set For The RDP Classifier
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4741447.svg)](https://doi.org/10.5281/zenodo.4741447)  
 
@@ -39,7 +39,7 @@ If you use these training sets in a publication, please cite:
 Porter, T.M., & Hajibabaei, M. (2018) Automated high throughput animal CO1 metabarcode classification.  Scientific Reports, 8, 4226.
 
 ### CO1 Classifier code repository
-CO1 Classifier, DOI: 10.5281/zenodo.4741447  
+Teresita M. Porter. (2017, December 4). Eukaryote CO1 Reference Set For The RDP Classifier (Version v4.0.1). Zenodo. http://doi.org/10.5281/zenodo.4741447   
 
 ### The RDP classifier 
 Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy.  Applied and Environmental Microbiology, 73: 5261.
