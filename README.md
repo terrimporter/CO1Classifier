@@ -35,10 +35,10 @@ java -Xmx8g -jar /path/to/rdp_classifier_2.13/classifier.jar -t /path/to/mydata_
 
 If you use these training sets in a publication, please cite:
 
-### The COI training set 
+### CO1 Classifier publication
 Porter, T.M., & Hajibabaei, M. (2018) Automated high throughput animal CO1 metabarcode classification.  Scientific Reports, 8, 4226.
 
-### CO1 Classifier repository
+### CO1 Classifier code repository
 CO1 Classifier, DOI: 10.5281/zenodo.4741447  
 
 ### The RDP classifier 
