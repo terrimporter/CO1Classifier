@@ -118,6 +118,19 @@ Species | 60 | 70 | 70 | 80 | NA
 
 NA = No cutoff available will result in 95% correct assignments
 
+If you are okay with more lenient cutoffs, since this method has been shown to have a high false negative rate in practice, then using these cutoffs should result in ~90% correct assignments:
+
+Rank | 500bp+ | 400 bp | 200 bp | 100 bp | 50 bp  
+--- |:---:|:---:|:---:|:---:|:---:  
+Superkingdom | 0 | 0 | 0 | 0 | 0  
+Kingdom | 0 | 0 | 0 | 0 | 0  
+Phylum | 0 | 0 | 0 | 0 | 0   
+Class | 0 | 0 | 0 | 0 | 0  
+Order | 0 | 0 | 0 | 0 | 0  
+Family | 0 | 0 | 0 | 0 | 10  
+Genus | 0 | 0 | 0 | 0 | 10  
+Species | 0 | 0 | 0 | 0 | 40  
+
 ### v2 
 
 The v2.0 release can be downloaded from here:
@@ -214,4 +227,4 @@ Wang, Q., Garrity, G. M., Tiedje, J. M., & Cole, J. R. (2007). Naive Bayesian Cl
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
 
-Last updated: May 6, 2021
+Last updated: May 13, 2021
