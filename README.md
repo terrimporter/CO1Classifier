@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4741447.svg)](https://doi.org/10.5281/zenodo.4741447)  
 
-This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/CO1Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.  Since version 5, I'm also releasing reference sets formatted to work with BLAST+ and SINTAX.  
+This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/CO1Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.  **Since version 5, I'm also releasing reference sets formatted to work with BLAST+ and SINTAX.**  
 
 ## Quick start
 
@@ -48,10 +48,9 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 ### v5
 
-This version was updated to include COI sequences mined from GenBank [February 2023].  These records reflect those deposited between
-1982 - 2022 (inclusive).  GenBank sequences were filtered to only include those 500bp+, containing no nucleotide ambiguities, and preferrably with a Linnean binomial species name and/or a BOLD BIN.  Sequences were screened to remove human and bacterial conaminants.  Bacterial outgroup sequences were added.
+This version was updated to include COI sequences mined from GenBank [February 2023].  These records reflect those deposited between 1982 - 2022 (inclusive).  GenBank sequences were filtered to only include those 500bp+, containing no nucleotide ambiguities, and preferrably with a Linnean binomial species name and/or a BOLD BIN.  Sequences were screened to remove human and bacterial conaminants.  Bacterial outgroup sequences were added.  Human sequences were retained to help catch contaminants where present.
 
-Accuracy was assessed using 5-fold cross validation.  The metazoan sequences in the classifier were divided into 5 groups. ach fold of the data, the remaining four folds were combined to create a training set (i.e., 20% test, 80% train).  The average number of correct sequences from each fold was used to calculate the cutoffs below.
+Accuracy was assessed using 5-fold cross validation.  The metazoan sequences in the classifier were divided into 5 groups. For each fold of the data, the remaining four folds were combined to create a training set (i.e., 20% test, 80% train).  The average number of correctly classified metazoan sequences from each fold were used to calculate the cutoffs below.
 
 Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~99% correct assignments:
 
