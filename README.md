@@ -1,8 +1,8 @@
-# Eukaryote CO1 Reference Set For The RDP Classifier
+# Eukaryote CO1 Reference Set For The Identification of DNA Metabarcodes
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4741447.svg)](https://doi.org/10.5281/zenodo.4741447)  
 
-This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/CO1Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.
+This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/CO1Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.  Since version 5, I'm also releasing reference sets formatted to work with BLAST+ and SINTAX.  
 
 ## Quick start
 
@@ -45,6 +45,56 @@ Teresita M. Porter. (2017, December 4). Eukaryote CO1 Reference Set For The RDP 
 Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy.  Applied and Environmental Microbiology, 73: 5261.
 
 ## Releases
+
+### v5
+
+This version was updated to include COI sequences mined from GenBank [February 2023].  These records reflect those deposited between
+1982 - 2022 (inclusive).  GenBank sequences were filtered to only include those 500bp+, containing no nucleotide ambiguities, and preferrably with a Linnean binomial species name and/or a BOLD BIN.  Sequences were screened to remove human and bacterial conaminants.  Bacterial outgroup sequences were added.
+
+Accuracy was assessed using 5-fold cross validation.  The metazoan sequences in the classifier were divided into 5 groups. ach fold of the data, the remaining four folds were combined to create a training set (i.e., 20% test, 80% train).  The average number of correct sequences from each fold was used to calculate the cutoffs below.
+
+Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~99% correct assignments:
+
+Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp
+--- |:---:|:---:|:---:|:---:|:---:  
+Superkingdom | 0 |  |  | 0 |   
+Kingdom | 0 |  |  | 0 |   
+Phylum | 0 |  |  | 0 |    
+Class | 0 |  |  | 0 |   
+Order | 0 |  |  | 0 |   
+Family | 0 |  |  | 0 |   
+Genus | 0.3 |  |  | 0 |   
+Species | NA |  |  | NA |   
+
+NA = No cutoff available will result in 99% correct assignments
+
+If you really want to work with species level data, then assuming that your query sequences are present in the reference set, using these cutoffs should result in ~95% correct assignments:
+
+Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp  
+--- |:---:|:---:|:---:|:---:|:---:  
+Superkingdom | 0 |  |  | 0 |   
+Kingdom | 0 |  |  | 0 |   
+Phylum | 0 |  |  | 0 |    
+Class | 0 |  |  | 0 |   
+Order | 0 |  |  | 0 |   
+Family | 0 |  |  | 0 |   
+Genus | 0 |  |  | 0 |   
+Species | 0.95 |  |  | 0.95 |   
+
+NA = No cutoff available will result in 95% correct assignments
+
+If you are okay with more lenient cutoffs, since this method has been shown to have a high false negative rate in practice, then using these cutoffs should result in ~90% correct assignments:
+
+Rank | 500bp+ | 400 bp | 300 bp | 400 bp | 100 bp  
+--- |:---:|:---:|:---:|:---:|:---:  
+Superkingdom | 0 |  |  | 0 |   
+Kingdom | 0 |  |  | 0 |   
+Phylum | 0 |  |  | 0 |    
+Class | 0 |  |  | 0 |   
+Order | 0 |  |  | 0 |   
+Family | 0 |  |  | 0 |   
+Genus | 0 |  |  | 0 |  
+Species | 0.1 |  |  | 0.20 |   
 
 ### v4
 
@@ -227,4 +277,4 @@ Wang, Q., Garrity, G. M., Tiedje, J. M., & Cole, J. R. (2007). Naive Bayesian Cl
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
 
-Last updated: May 13, 2021
+Last updated: March 27, 2023
