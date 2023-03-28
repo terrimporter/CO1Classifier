@@ -2,7 +2,9 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4741447.svg)](https://doi.org/10.5281/zenodo.4741447)  
 
-This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/CO1Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.  **Since version 5, I'm also releasing reference sets formatted to work with BLAST+ and SINTAX.**  
+This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/CO1Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.  
+
+**In the latest version, reference sequences formatted for the RDP classifier, BLAST, and SINTAX are also available.**  
 
 ## Quick start
 
@@ -48,9 +50,9 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 ### v5
 
-This version was updated to include eukaryote COI sequences mined from GenBank [February 2023].  This version includes records deposited between 1982 - 2022 (inclusive).  GenBank sequences were filtered to only include sequences 500bp+, containing no nucleotide ambiguities, and preferrably with a Linnean binomial species name and/or a BOLD BIN (new).  Sequences were screened to remove human and bacterial conaminants.  Bacterial outgroup sequences were added.  Human sequences were retained to help catch contaminants where present.
+This version was updated to include eukaryote COI sequences mined from GenBank [February 2023].  This version includes records deposited between 1982 - 2022 (inclusive).  GenBank sequences were filtered to only include sequences 500bp+, containing no nucleotide ambiguities, and preferrably with a Linnean binomial species name and/or a BOLD BIN (new).  Sequences were screened to remove human and bacterial conaminants.  Bacterial outgroup sequences were added.  Human sequences are included.
 
-**This version is based on 2,211,191 COI sequences from 239,382 taxa including 188,534 species/BINs.  This is an increase of 989,663 more sequences, 85K more taxa, and 73K more species compared to v4.**
+**This version is based on 2,211,191 COI sequences from 239,382 taxa including 188,534 species/BINs.  This is an increase of 989,663 more sequences, 85,031 more taxa, and 73,847 more species compared to v4.**
 
 Accuracy was assessed using 5-fold cross validation (new).  The metazoan sequences in the classifier were divided into 5 groups. For each fold of the data, the remaining four folds were combined (i.e., 20% test, 80% train) with the outgroup sequences to create a training set.  The average number of correctly classified metazoan sequences from each fold were used to calculate the cutoffs below.
 
@@ -265,6 +267,29 @@ For additional information on how to run the RDP classifier, see the RDPclassifi
 
 The RDP classifier v2.12 can be downloaded from:
 https://sourceforge.net/projects/rdp-classifier/
+
+# Notes on using the reference set for BLAST searches
+
+The custom reference set formatted as a BLAST nucleotide database works with the BLAST+ suite that runs at the command line.  Information on where to download the BLAST+ executables is available from here https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html .  To map taxonomy to your results, you also need to have the taxdb files downloaded to the same directory you put the custom reference BLAST database files and these can be downloaded from here: https://ftp.ncbi.nlm.nih.gov/blast/db/ .  
+
+```linux
+# BLAST+ can be downloaded directly to any conda environment
+conda install -c bioconda blast
+
+# If you don't already have a directory for your custom blast database(s) create one
+mkdir blast_db
+cd blast_db
+
+# download the custom blast database and decompress it
+wget 
+
+# Line to add to your .bashrc file so that blasn can find your custom database(s)
+export BLASTDB="$HOME/blast_db"
+
+# Example of a top BLAST hit search using the custom database provided here
+blastn -query test.fasta -task megablast -db COIv5.fasta -out test.blastn -evalue '1e-20' -outfmt "6 qseqid sseqid ssciname pident length evalue bitscore qcovs" -max_target_seqs 1 -num_threads 3![image](https://user-images.githubusercontent.com/34171056/228100608-94ac6b7e-f9e9-4031-8693-78cb7eafc40d.png)
+
+```
 
 # References
 
