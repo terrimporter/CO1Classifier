@@ -270,25 +270,29 @@ https://sourceforge.net/projects/rdp-classifier/
 
 # Notes on using the reference set for BLAST searches
 
-The custom reference set formatted as a BLAST nucleotide database works with the BLAST+ suite that runs at the command line.  Information on where to download the BLAST+ executables is available from here https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html .  To map taxonomy to your results, you also need to have the taxdb files downloaded to the same directory you put the custom reference BLAST database files and these can be downloaded from here: https://ftp.ncbi.nlm.nih.gov/blast/db/ .  
+The custom reference set formatted as a BLAST nucleotide database works with the BLAST+ suite that runs at the command line.  Information on where to download the BLAST+ executables directly from the NCBI is available from here https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html .  To map taxonomy to your results, you also need to have the taxdb files downloaded to the same directory you put the custom reference BLAST database files and these can be downloaded from here: https://ftp.ncbi.nlm.nih.gov/blast/db/ .  
 
 ```linux
-# BLAST+ can be downloaded directly to any conda environment
+# If you don't already have it, BLAST+ can be downloaded directly to any conda environment
 conda install -c bioconda blast
 
 # If you don't already have a directory for your custom blast database(s) create one
 mkdir blast_db
+
+# download the custom blast database into your database directory and decompress it
 cd blast_db
+wget https://github.com/terrimporter/CO1Classifier/releases/download/BLAST-COI-v5.0.0/BLAST_COIv5.0.0.zip
+unzip BLAST_COIv5.0.0.zip
 
-# download the custom blast database and decompress it
-wget 
+# make sure you've added the taxonomy files to your database directory as well and decompressed the files
+wget https://ftp.ncbi.nlm.nih.gov/blast/db/taxdb.tar.gz
+tar -xvf taxdb.tar.gz
 
-# Line to add to your .bashrc file so that blasn can find your custom database(s)
+# Line to add to your .bashrc file (or equivalent) so that blastn can find your custom database(s)
 export BLASTDB="$HOME/blast_db"
 
 # Example of a top BLAST hit search using the custom database provided here
-blastn -query test.fasta -task megablast -db COIv5.fasta -out test.blastn -evalue '1e-20' -outfmt "6 qseqid sseqid ssciname pident length evalue bitscore qcovs" -max_target_seqs 1 -num_threads 3![image](https://user-images.githubusercontent.com/34171056/228100608-94ac6b7e-f9e9-4031-8693-78cb7eafc40d.png)
-
+blastn -query test.fasta -task megablast -db COIv5.fasta -out test.blastn -evalue '1e-20' -outfmt "6 qseqid sseqid ssciname pident length evalue bitscore qcovs" -max_target_seqs 1 -num_threads 3
 ```
 
 # References
