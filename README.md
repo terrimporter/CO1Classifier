@@ -52,7 +52,7 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 This version was updated to include eukaryote COI sequences mined from GenBank [February 2023].  This version includes records deposited between 1982 - 2022 (inclusive).  GenBank sequences were filtered to only include sequences 500bp+, containing no nucleotide ambiguities, and preferrably with a Linnean binomial species name and/or a BOLD BIN (new).  Sequences were screened to remove human and bacterial contaminants.  Bacterial outgroup sequences were added.  Human sequences are included.
 
-**This version is based on 2,211,191 COI sequences from 239,382 taxa including 188,534 species/BINs.  This is an increase of 989,663 more sequences, 85,031 more taxa, and 73,847 more species compared to v4.**
+\*\*This version is based on 2,211,191 COI sequences from 239,382 taxa including 188,534 species/BINs.  This is an increase of 989,663 more sequences, 85,031 more taxa, and 73,847 more species compared to v4.\*\*
 
 Accuracy was assessed using 5-fold cross validation (new).  The metazoan sequences in the classifier were divided into 5 groups. For each fold of the data, the remaining four folds were combined (i.e., 20% test, 80% train) with the outgroup sequences to create a training set.  The average number of correctly classified metazoan sequences from each fold were used to calculate the cutoffs below.
 
