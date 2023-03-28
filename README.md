@@ -295,6 +295,15 @@ export BLASTDB="$HOME/blast_db"
 blastn -query test.fasta -task megablast -db COIv5.fasta -out test.blastn -evalue '1e-20' -outfmt "6 qseqid sseqid ssciname pident length evalue bitscore qcovs" -max_target_seqs 1 -num_threads 3
 ```
 
+# Notes for using the reference set with SINTAX
+
+The SINTAX formatted database can be used with USEARCH or VSEARCH.
+
+```linux
+# example of a SINTAX algorithm search via VSEARCH v2.21.1
+vsearch --sintax test.fasta --db sintax.udb --tabbedout sintax.txt
+```
+
 # References
 
 Porter, T.M., & Gibson, J.F., Shokralla, S., Baird, D.J., Golding, G.B., Hajibabaei, M. (2014) Rapid and accurate taxonomic classification of insect (class Insecta) cytochrome c oxidase subunit 1 (COI) DNA barcode sequences using a naive Bayesian classifier.  Molecular Ecology Resources, 14: 929-942.
