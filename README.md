@@ -58,48 +58,59 @@ Accuracy was assessed using 5-fold cross validation (new).  The metazoan sequenc
 
 [Additional cutoff values will be added when they are available - March 27, 2023]
 
-Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~99% correct assignments:
+Assuming that your query sequences are present in the reference set, using these minimum bootstrap support cutoffs should result in at least 99% correct assignments:
 
 Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp
 --- |:---:|:---:|:---:|:---:|:---:  
-Superkingdom | 0 |  |  | 0 |   
-Kingdom | 0 |  |  | 0 |   
-Phylum | 0 |  |  | 0 |    
-Class | 0 |  |  | 0 |   
-Order | 0 |  |  | 0 |   
-Family | 0 |  |  | 0 |   
-Genus | 0.3 |  |  | 0 |   
-Species | NA |  |  | NA |   
+Superkingdom | 0 |  |  | 0 | 0  
+Kingdom | 0 |  |  | 0 | 0  
+Phylum | 0 |  |  | 0 | 0   
+Class | 0 |  |  | 0 | 0  
+Order | 0 |  |  | 0 | 0  
+Family | 0 |  |  | 0 | 0.2    
+Genus | 0.3 |  |  | 0 | 0.3    
+Species | NA |  |  | NA | NA  
 
 NA = No cutoff available will result in 99% correct assignments
 
-If you really want to work with species level data, then assuming that your query sequences are present in the reference set, using these cutoffs should result in ~95% correct assignments:
+If you really want to work with species level data, then assuming that your query sequences are present in the reference set, using these minimum bootstrap support cutoffs should result in at least 95% correct assignments:
 
 Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp  
 --- |:---:|:---:|:---:|:---:|:---:  
-Superkingdom | 0 |  |  | 0 |   
-Kingdom | 0 |  |  | 0 |   
-Phylum | 0 |  |  | 0 |    
-Class | 0 |  |  | 0 |   
-Order | 0 |  |  | 0 |   
-Family | 0 |  |  | 0 |   
-Genus | 0 |  |  | 0 |   
-Species | 0.95 |  |  | 0.95 |   
+Superkingdom | 0 |  |  | 0 | 0  
+Kingdom | 0 |  |  | 0 | 0  
+Phylum | 0 |  |  | 0 | 0   
+Class | 0 |  |  | 0 | 0  
+Order | 0 |  |  | 0 | 0  
+Family | 0 |  |  | 0 | 0  
+Genus | 0 |  |  | 0 | 0  
+Species | 0.95 |  |  | 0.95 | 0.95  
 
-NA = No cutoff available will result in 95% correct assignments
-
-If you are okay with more lenient cutoffs, since this method has been shown to have a high false negative rate in practice, then using these cutoffs should result in ~90% correct assignments:
+If you are okay with more lenient cutoffs, as this method has been shown to have a high false negative rate in practice, then using these minimum bootstrap support cutoffs should result in at least 90% correct assignments:
 
 Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp  
 --- |:---:|:---:|:---:|:---:|:---:  
-Superkingdom | 0 |  |  | 0 |   
-Kingdom | 0 |  |  | 0 |   
-Phylum | 0 |  |  | 0 |    
-Class | 0 |  |  | 0 |   
-Order | 0 |  |  | 0 |   
-Family | 0 |  |  | 0 |   
-Genus | 0 |  |  | 0 |  
-Species | 0.1 |  |  | 0.20 |   
+Superkingdom | 0 |  |  | 0 | 0  
+Kingdom | 0 |  |  | 0 | 0  
+Phylum | 0 |  |  | 0 | 0   
+Class | 0 |  |  | 0 | 0  
+Order | 0 |  |  | 0 | 0  
+Family | 0 |  |  | 0 | 0  
+Genus | 0 |  |  | 0 | 0 
+Species | 0.1 |  |  | 0.20 | 0.3  
+
+If you are okay with more lenient cutoffs, as this method has been shown to have a high false negative rate in practice, then using these minimum bootstrap support cutoffs should result in at least 80% correct assignments:
+
+Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp  
+--- |:---:|:---:|:---:|:---:|:---:  
+Superkingdom | 0 |  |  | 0 | 0  
+Kingdom | 0 |  |  | 0 | 0  
+Phylum | 0 |  |  | 0 | 0   
+Class | 0 |  |  | 0 | 0  
+Order | 0 |  |  | 0 | 0  
+Family | 0 |  |  | 0 | 0  
+Genus | 0 |  |  | 0 | 0 
+Species | 0 |  |  | 0 | 0  
 
 ### v4
 
