@@ -54,6 +54,12 @@ This version was updated to:
 1. Fix a problem with commas present within result fields causing misalignment of columns.
 2. Added a step to cosolidate BINs IDs in GenBank records with newer Linnean binomial species names from BOLD where available.
 
+This version includes eukaryote COI sequences mined from GenBank [February 2023]. This version includes records deposited between 1982 - 2022 (inclusive). GenBank sequences were filtered to only include sequences 500bp+, containing no nucleotide ambiguities, and preferrably with a Linnean binomial species name and/or a BOLD BIN (new). Sequences were screened to remove human and bacterial contaminants. Bacterial outgroup sequences were added. Human sequences are included.
+
+**This version is based on 2,216,547 COI sequences from 236,247 taxa including 185,389 species/BINs. This is an increase of 995,019 more sequences, 81,896 more taxa, and 70,693 more species compared to v4.**
+
+Accuracy was assessed using 5-fold cross validation (new). The metazoan sequences in the classifier were divided into 5 groups. For each fold of the data, the remaining four folds were combined (i.e., 20% test, 80% train) with the outgroup sequences to create a training set. The average number of correctly classified metazoan sequences from each fold were used to calculate the cutoffs below.
+
 [Additional cutoff values will be added when they are available - May 1, 2023]
 
 Assuming that your query sequences are present in the reference set, using these minimum bootstrap support cutoffs should result in at least 99% correct assignments:
