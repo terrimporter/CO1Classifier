@@ -1,6 +1,6 @@
 # Eukaryote CO1 Reference Set For The Identification of DNA Metabarcodes
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4741447.svg)](https://doi.org/10.5281/zenodo.4741447)  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4741447.svg)](https://doi.org/10.5281/zenodo.7884232)  
 
 This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/CO1Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.  
 
