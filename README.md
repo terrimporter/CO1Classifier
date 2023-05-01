@@ -52,7 +52,7 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 This version was updated to:
 1. Fix a problem with commas present within result fields causing misalignment of columns.
-2. Added a step to cosolidate BIN IDs in GenBank records with newer Linnean binomial species names (if present) from BOLD data package BOLD_Public.24-Mar-2023 .
+2. Added a step to consolidate BIN IDs in GenBank records with newer Linnean binomial species names (if present) from BOLD data package BOLD_Public.24-Mar-2023 .
 
 This version includes eukaryote COI sequences mined from GenBank [February 2023]. This version includes records deposited between 1982 - 2022 (inclusive). GenBank sequences were filtered to only include sequences 500bp+, containing no nucleotide ambiguities, and preferrably with a Linnean binomial species name and/or a BOLD BIN (new). Sequences were screened to remove human and bacterial contaminants. Bacterial outgroup sequences were added. Human sequences are included.
 
