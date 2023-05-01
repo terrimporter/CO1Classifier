@@ -52,7 +52,7 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 This version was updated to:
 1. Fix a problem with commas present within result fields causing misalignment of columns.
-2. Added a step to cosolidate BINs IDs in GenBank records with newer latin binomials from BOLD where available.
+2. Added a step to cosolidate BINs IDs in GenBank records with newer Linnean binomial species names from BOLD where available.
 
 [Additional cutoff values will be added when they are available - May 1, 2023]
 
