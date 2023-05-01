@@ -4,7 +4,7 @@
 
 This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote CO1 mtDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/CO1Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.  
 
-\*\*In the latest version 5 release, reference sequences formatted for the RDP classifier, BLAST, and SINTAX are also available.\*\*  
+\*\*In the latest version 5.1.0 release, reference sequences formatted for the RDP classifier, BLAST, and SINTAX are also available.\*\*  
 
 ## Quick start
 
@@ -52,7 +52,7 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 This version was updated to:
 1. Fix a problem with commas present within result fields causing misalignment of columns.
-2. Added a step to cosolidate BIN IDs in GenBank records with newer Linnean binomial species names from BOLD where available.
+2. Added a step to cosolidate BIN IDs in GenBank records with newer Linnean binomial species names (if present) from BOLD data package BOLD_Public.24-Mar-2023 .
 
 This version includes eukaryote COI sequences mined from GenBank [February 2023]. This version includes records deposited between 1982 - 2022 (inclusive). GenBank sequences were filtered to only include sequences 500bp+, containing no nucleotide ambiguities, and preferrably with a Linnean binomial species name and/or a BOLD BIN (new). Sequences were screened to remove human and bacterial contaminants. Bacterial outgroup sequences were added. Human sequences are included.
 
