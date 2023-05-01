@@ -19,10 +19,10 @@ unzip rdp_classifier_2.13
 # record path to classifier.jar ex. /path/to/rdp_classifier_2.13/dist/classifier.jar
 
 ############ Get the latest COI training set
-wget https://github.com/terrimporter/CO1Classifier/releases/download/v4/CO1v4_trained.tar.gz
+wget https://github.com/terrimporter/CO1Classifier/releases/download/RDP-COI-v5.1.0/RDP_COIv5.1.0.zip
 
 # decompress it
-tar -xzf CO1v4_trained.tar.gz
+unzip RDP_COIv5.1.0.zip
 
 # record the path to the rRNAClassifier.properties file ex. /path/to/mydata_trained/rRNAClassifier.properties
 
@@ -48,28 +48,26 @@ Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA seque
 
 ## Releases
 
-### v5 \*\* NEW \*\*
+### v5.1.0 \*\* NEW \*\*
 
-This version was updated to include eukaryote COI sequences mined from GenBank [February 2023].  This version includes records deposited between 1982 - 2022 (inclusive).  GenBank sequences were filtered to only include sequences 500bp+, containing no nucleotide ambiguities, and preferrably with a Linnean binomial species name and/or a BOLD BIN (new).  Sequences were screened to remove human and bacterial contaminants.  Bacterial outgroup sequences were added.  Human sequences are included.
+This version was updated to:
+1. Fix a problem with commas present within result fields causing misalignment of columns.
+2. Added a step to cosolidate BINs IDs in GenBank records with newer latin binomials from BOLD where available.
 
-\*\*This version is based on 2,211,191 COI sequences from 239,382 taxa including 188,534 species/BINs.  This is an increase of 989,663 more sequences, 85,031 more taxa, and 73,847 more species compared to v4.\*\*
-
-Accuracy was assessed using 5-fold cross validation (new).  The metazoan sequences in the classifier were divided into 5 groups. For each fold of the data, the remaining four folds were combined (i.e., 20% test, 80% train) with the outgroup sequences to create a training set.  The average number of correctly classified metazoan sequences from each fold were used to calculate the cutoffs below.
-
-[Additional cutoff values will be added when they are available - March 27, 2023]
+[Additional cutoff values will be added when they are available - May 1, 2023]
 
 Assuming that your query sequences are present in the reference set, using these minimum bootstrap support cutoffs should result in at least 99% correct assignments:
 
 Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp
 --- |:---:|:---:|:---:|:---:|:---:  
-Superkingdom | 0 |  |  | 0 | 0  
-Kingdom | 0 |  |  | 0 | 0  
-Phylum | 0 |  |  | 0 | 0   
-Class | 0 |  |  | 0 | 0  
-Order | 0 |  |  | 0 | 0  
-Family | 0 |  |  | 0 | 0.2    
-Genus | 0.3 |  |  | 0 | 0.3    
-Species | NA |  |  | NA | NA  
+Superkingdom | 0 |  |  | 0 |   
+Kingdom | 0 |  |  | 0 |   
+Phylum | 0 |  |  | 0 |    
+Class | 0 |  |  | 0 |   
+Order | 0 |  |  | 0 |   
+Family | 0 |  |  | 0.1 |     
+Genus | 0.3 |  |  | 0.3 |     
+Species | NA |  |  | NA |   
 
 NA = No cutoff available will result in 99% correct assignments
 
@@ -77,40 +75,50 @@ If you really want to work with species level data, then assuming that your quer
 
 Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp  
 --- |:---:|:---:|:---:|:---:|:---:  
-Superkingdom | 0 |  |  | 0 | 0  
-Kingdom | 0 |  |  | 0 | 0  
-Phylum | 0 |  |  | 0 | 0   
-Class | 0 |  |  | 0 | 0  
-Order | 0 |  |  | 0 | 0  
-Family | 0 |  |  | 0 | 0  
-Genus | 0 |  |  | 0 | 0  
-Species | 0.95 |  |  | 0.95 | 0.95  
+Superkingdom | 0 |  |  | 0 |   
+Kingdom | 0 |  |  | 0 |   
+Phylum | 0 |  |  | 0 |    
+Class | 0 |  |  | 0 |   
+Order | 0 |  |  | 0 |   
+Family | 0 |  |  | 0 |   
+Genus | 0 |  |  | 0 |   
+Species | 0.9 |  |  | 0.8 |   
 
 If you are okay with more lenient cutoffs, as this method has been shown to have a high false negative rate in practice, then using these minimum bootstrap support cutoffs should result in at least 90% correct assignments:
 
 Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp  
 --- |:---:|:---:|:---:|:---:|:---:  
-Superkingdom | 0 |  |  | 0 | 0  
-Kingdom | 0 |  |  | 0 | 0  
-Phylum | 0 |  |  | 0 | 0   
-Class | 0 |  |  | 0 | 0  
-Order | 0 |  |  | 0 | 0  
-Family | 0 |  |  | 0 | 0  
-Genus | 0 |  |  | 0 | 0 
-Species | 0.1 |  |  | 0.20 | 0.3  
+Superkingdom | 0 |  |  | 0 |   
+Kingdom | 0 |  |  | 0 |   
+Phylum | 0 |  |  | 0 |    
+Class | 0 |  |  | 0 |   
+Order | 0 |  |  | 0 |   
+Family | 0 |  |  | 0 |   
+Genus | 0 |  |  | 0 |  
+Species | 0 |  |  | 0.1 |   
 
 If you are okay with more lenient cutoffs, as this method has been shown to have a high false negative rate in practice, then using these minimum bootstrap support cutoffs should result in at least 80% correct assignments:
 
 Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp  
 --- |:---:|:---:|:---:|:---:|:---:  
-Superkingdom | 0 |  |  | 0 | 0  
-Kingdom | 0 |  |  | 0 | 0  
-Phylum | 0 |  |  | 0 | 0   
-Class | 0 |  |  | 0 | 0  
-Order | 0 |  |  | 0 | 0  
-Family | 0 |  |  | 0 | 0  
-Genus | 0 |  |  | 0 | 0 
-Species | 0 |  |  | 0 | 0  
+Superkingdom | 0 |  |  | 0 |   
+Kingdom | 0 |  |  | 0 |   
+Phylum | 0 |  |  | 0 |    
+Class | 0 |  |  | 0 |   
+Order | 0 |  |  | 0 |   
+Family | 0 |  |  | 0 |   
+Genus | 0 |  |  | 0 |  
+Species | 0 |  |  | 0 |   
+
+### v5 
+
+This version was updated to include eukaryote COI sequences mined from GenBank [February 2023].  This version includes records deposited between 1982 - 2022 (inclusive).  GenBank sequences were filtered to only include sequences 500bp+, containing no nucleotide ambiguities, and preferrably with a Linnean binomial species name and/or a BOLD BIN (new).  Sequences were screened to remove human and bacterial contaminants.  Bacterial outgroup sequences were added.  Human sequences are included.
+
+\*\*This version is based on 2,211,191 COI sequences from 239,382 taxa including 188,534 species/BINs.  This is an increase of 989,663 more sequences, 85,031 more taxa, and 73,847 more species compared to v4.\*\*
+
+Accuracy was assessed using 5-fold cross validation (new).  The metazoan sequences in the classifier were divided into 5 groups. For each fold of the data, the remaining four folds were combined (i.e., 20% test, 80% train) with the outgroup sequences to create a training set.  The average number of correctly classified metazoan sequences from each fold were used to calculate the cutoffs below.
+
+[Cutoff values will NOT be added, please use v5.1.0 instead]
 
 ### v4
 
@@ -329,4 +337,4 @@ Wang, Q., Garrity, G. M., Tiedje, J. M., & Cole, J. R. (2007). Naive Bayesian Cl
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
 
-Last updated: March 27, 2023
+Last updated: May 1, 2023
