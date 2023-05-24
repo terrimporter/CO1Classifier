@@ -60,20 +60,18 @@ This version includes eukaryote COI sequences mined from GenBank [February 2023]
 
 Accuracy was assessed using 5-fold cross validation (new). The metazoan sequences in the classifier were divided into 5 groups. For each fold of the data, the remaining four folds were combined (i.e., 20% test, 80% train) with the outgroup sequences to create a training set. The average number of correctly classified metazoan sequences from each fold were used to calculate the cutoffs below.
 
-[Additional cutoff values will be added when they are available - May 15, 2023]
-
 Assuming that your query sequences are present in the reference set, using these minimum bootstrap support cutoffs should result in at least 99% correct assignments:
 
 Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp
 --- |:---:|:---:|:---:|:---:|:---:  
-Superkingdom | 0 |  | 0 | 0 | 0  
-Kingdom | 0 |  | 0 | 0 | 0  
-Phylum | 0 |  | 0 | 0 | 0   
-Class | 0 |  | 0 | 0 | 0  
-Order | 0 |  | 0 | 0 | 0.1    
-Family | 0 |  | 0 | 0.1 | 0.2      
-Genus | 0.3 |  | 0.3 | 0.3 | 0.3       
-Species | NA |  | NA | NA | NA    
+Superkingdom | 0 | 0 | 0 | 0 | 0  
+Kingdom | 0 | 0 | 0 | 0 | 0  
+Phylum | 0 | 0 | 0 | 0 | 0   
+Class | 0 | 0 | 0 | 0 | 0  
+Order | 0 | 0 | 0 | 0 | 0.1    
+Family | 0 | 0 | 0 | 0.1 | 0.2      
+Genus | 0.3 | 0.3 | 0.3 | 0.3 | 0.3       
+Species | NA | NA | NA | NA | NA    
 
 NA = No cutoff available will result in 99% correct assignments
 
@@ -81,40 +79,27 @@ If you really want to work with species level data, then assuming that your quer
 
 Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp  
 --- |:---:|:---:|:---:|:---:|:---:  
-Superkingdom | 0 |  | 0 | 0 | 0  
-Kingdom | 0 |  | 0 | 0 | 0  
-Phylum | 0 |  | 0 | 0 | 0   
-Class | 0 |  | 0 | 0 | 0  
-Order | 0 |  | 0 | 0 | 0  
-Family | 0 |  | 0 | 0 | 0  
-Genus | 0 |  | 0 | 0 | 0  
-Species | 0.9 |  | 0.8 | 0.8 | 0.8  
+Superkingdom | 0 | 0 | 0 | 0 | 0  
+Kingdom | 0 | 0 | 0 | 0 | 0  
+Phylum | 0 | 0 | 0 | 0 | 0   
+Class | 0 | 0 | 0 | 0 | 0  
+Order | 0 | 0 | 0 | 0 | 0  
+Family | 0 | 0 | 0 | 0 | 0  
+Genus | 0 | 0 | 0 | 0 | 0  
+Species | 0.9 | 0.8 | 0.8 | 0.8 | 0.8  
 
 If you are okay with more lenient cutoffs, as this method has been shown to have a high false negative rate in practice, then using these minimum bootstrap support cutoffs should result in at least 90% correct assignments:
 
 Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp  
 --- |:---:|:---:|:---:|:---:|:---:  
-Superkingdom | 0 |  | 0 | 0 | 0  
-Kingdom | 0 |  | 0 | 0 | 0  
-Phylum | 0 |  | 0 | 0 | 0   
-Class | 0 |  | 0 | 0 | 0  
-Order | 0 |  | 0 | 0 | 0  
-Family | 0 |  | 0 | 0 | 0  
-Genus | 0 |  | 0 | 0 | 0 
-Species | 0 |  | 0 | 0.1 | 0.2  
-
-If you are okay with more lenient cutoffs, as this method has been shown to have a high false negative rate in practice, then using these minimum bootstrap support cutoffs should result in at least 80% correct assignments:
-
-Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp  
---- |:---:|:---:|:---:|:---:|:---:  
-Superkingdom | 0 |  | 0 | 0 | 0  
-Kingdom | 0 |  | 0 | 0 | 0  
-Phylum | 0 |  | 0 | 0 | 0   
-Class | 0 |  | 0 | 0 | 0  
-Order | 0 |  | 0 | 0 | 0  
-Family | 0 |  | 0 | 0 | 0  
-Genus | 0 |  | 0 | 0 | 0 
-Species | 0 |  | 0 | 0 | 0  
+Superkingdom | 0 | 0 | 0 | 0 | 0  
+Kingdom | 0 | 0 | 0 | 0 | 0  
+Phylum | 0 | 0 | 0 | 0 | 0   
+Class | 0 | 0 | 0 | 0 | 0  
+Order | 0 | 0 | 0 | 0 | 0  
+Family | 0 | 0 | 0 | 0 | 0  
+Genus | 0 | 0 | 0 | 0 | 0 
+Species | 0 | 0 | 0 | 0.1 | 0.2  
 
 ### v5 
 
@@ -343,4 +328,4 @@ Wang, Q., Garrity, G. M., Tiedje, J. M., & Cole, J. R. (2007). Naive Bayesian Cl
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
 
-Last updated: May 15, 2023
+Last updated: May 24, 2023
